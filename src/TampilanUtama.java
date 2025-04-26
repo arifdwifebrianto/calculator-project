@@ -8,12 +8,15 @@
  * @author THINKPAD
  */
 public class TampilanUtama extends javax.swing.JFrame {
-
+    String angka;
+    double jumlah, bil1, bil2;
+    int pilih;
     /**
      * Creates new form TampilanUtama
      */
     public TampilanUtama() {
         initComponents();
+        angka = "";
     }
 
     /**
@@ -39,7 +42,7 @@ public class TampilanUtama extends javax.swing.JFrame {
         angka7 = new javax.swing.JButton();
         angka4 = new javax.swing.JButton();
         angkaa1 = new javax.swing.JButton();
-        samDengan = new javax.swing.JButton();
+        samaDengan = new javax.swing.JButton();
         output = new javax.swing.JTextField();
         hapus1saja = new javax.swing.JButton();
         angka5 = new javax.swing.JButton();
@@ -51,6 +54,11 @@ public class TampilanUtama extends javax.swing.JFrame {
         bagi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         bagi.setForeground(new java.awt.Color(51, 204, 0));
         bagi.setText("/");
+        bagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bagiActionPerformed(evt);
+            }
+        });
 
         kali.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         kali.setForeground(new java.awt.Color(51, 204, 0));
@@ -64,6 +72,11 @@ public class TampilanUtama extends javax.swing.JFrame {
         kurang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         kurang.setForeground(new java.awt.Color(51, 204, 0));
         kurang.setText("-");
+        kurang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kurangActionPerformed(evt);
+            }
+        });
 
         koma.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         koma.setText(".");
@@ -76,6 +89,11 @@ public class TampilanUtama extends javax.swing.JFrame {
         tambah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tambah.setForeground(new java.awt.Color(51, 204, 0));
         tambah.setText("+");
+        tambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tambahActionPerformed(evt);
+            }
+        });
 
         persen.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         persen.setForeground(new java.awt.Color(51, 204, 0));
@@ -105,18 +123,43 @@ public class TampilanUtama extends javax.swing.JFrame {
 
         angka0.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka0.setText("0");
+        angka0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka0ActionPerformed(evt);
+            }
+        });
 
         angka6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka6.setText("6");
+        angka6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka6ActionPerformed(evt);
+            }
+        });
 
         angka3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka3.setText("3");
+        angka3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka3ActionPerformed(evt);
+            }
+        });
 
         angka7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka7.setText("7");
+        angka7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka7ActionPerformed(evt);
+            }
+        });
 
         angka4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka4.setText("4");
+        angka4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka4ActionPerformed(evt);
+            }
+        });
 
         angkaa1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angkaa1.setText("1");
@@ -126,12 +169,12 @@ public class TampilanUtama extends javax.swing.JFrame {
             }
         });
 
-        samDengan.setBackground(new java.awt.Color(0, 204, 0));
-        samDengan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        samDengan.setText("=");
-        samDengan.addActionListener(new java.awt.event.ActionListener() {
+        samaDengan.setBackground(new java.awt.Color(0, 204, 0));
+        samaDengan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        samaDengan.setText("=");
+        samaDengan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                samDenganActionPerformed(evt);
+                samaDenganActionPerformed(evt);
             }
         });
 
@@ -147,9 +190,19 @@ public class TampilanUtama extends javax.swing.JFrame {
 
         angka5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka5.setText("5");
+        angka5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka5ActionPerformed(evt);
+            }
+        });
 
         angka2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka2.setText("2");
+        angka2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka2ActionPerformed(evt);
+            }
+        });
 
         angka8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka8.setText("8");
@@ -205,7 +258,7 @@ public class TampilanUtama extends javax.swing.JFrame {
                                             .addComponent(tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(kurang, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE))))
-                            .addComponent(samDengan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(samaDengan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -251,7 +304,7 @@ public class TampilanUtama extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(angka0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(koma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(samDengan, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
+                    .addComponent(samaDengan, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -263,36 +316,130 @@ public class TampilanUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_outputActionPerformed
 
     private void kaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kaliActionPerformed
-        // TODO add your handling code here:
+        bil1 = Double.parseDouble(angka);
+        output.setText("x");
+        angka = "";
+        pilih = 3;
     }//GEN-LAST:event_kaliActionPerformed
 
     private void persenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_persenActionPerformed
 
-    private void samDenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_samDenganActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_samDenganActionPerformed
+    private void samaDenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_samaDenganActionPerformed
+        switch (pilih) {
+            case 1:
+                bil2 = Double.parseDouble(angka);
+                jumlah = bil1 + bil2;
+                angka = Double.toString(jumlah);
+                output.setText(angka);
+                break;
+            case 2:
+                bil2 = Double.parseDouble(angka);
+                jumlah = bil1 - bil2;
+                angka = Double.toString(jumlah);
+                output.setText(angka);
+                break;
+            case 3:
+                bil2 = Double.parseDouble(angka);
+                jumlah = bil1 * bil2;
+                angka = Double.toString(jumlah);
+                output.setText(angka);
+                break;
+            case 4:
+                bil2 = Double.parseDouble(angka);
+                jumlah = bil1 / bil2;
+                angka = Double.toString(jumlah);
+                output.setText(angka);
+                break;
+            default :
+                break;
+        }
+    }//GEN-LAST:event_samaDenganActionPerformed
 
     private void angka8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka8ActionPerformed
-        // TODO add your handling code here:
+        angka += "8";
+        output.setText(angka);
     }//GEN-LAST:event_angka8ActionPerformed
 
     private void angkaa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkaa1ActionPerformed
-        // TODO add your handling code here:
+        angka += "1";
+        output.setText(angka);
     }//GEN-LAST:event_angkaa1ActionPerformed
 
     private void angka9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka9ActionPerformed
-        // TODO add your handling code here:
+        angka += "9";
+        output.setText(angka);
     }//GEN-LAST:event_angka9ActionPerformed
 
     private void komaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_komaActionPerformed
-        // TODO add your handling code here:
+        angka += ",";
+        output.setText(angka);
     }//GEN-LAST:event_komaActionPerformed
 
     private void bersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihActionPerformed
-        // TODO add your handling code here:
+        output.setText(angka);
+        bil1 = 0.0;
+        bil2 = 0.0;
+        jumlah = 0.0;
+        angka = "";
     }//GEN-LAST:event_bersihActionPerformed
+
+    private void angka0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka0ActionPerformed
+        angka += "0";
+        output.setText(angka);
+    }//GEN-LAST:event_angka0ActionPerformed
+
+    private void angka2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka2ActionPerformed
+        angka += "2";
+        output.setText(angka);
+    }//GEN-LAST:event_angka2ActionPerformed
+
+    private void angka3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka3ActionPerformed
+        angka += "3";
+        output.setText(angka);
+    }//GEN-LAST:event_angka3ActionPerformed
+
+    private void angka4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka4ActionPerformed
+        angka += "4";
+        output.setText(angka);
+    }//GEN-LAST:event_angka4ActionPerformed
+
+    private void angka5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka5ActionPerformed
+        angka += "5";
+        output.setText(angka);
+    }//GEN-LAST:event_angka5ActionPerformed
+
+    private void angka6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka6ActionPerformed
+        angka += "6";
+        output.setText(angka);
+    }//GEN-LAST:event_angka6ActionPerformed
+
+    private void angka7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka7ActionPerformed
+        angka += "7";
+        output.setText(angka);
+    }//GEN-LAST:event_angka7ActionPerformed
+
+    private void tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahActionPerformed
+        bil1 = Double.parseDouble(angka);
+        output.setText("+");
+        angka = "";
+        pilih = 1;
+    }//GEN-LAST:event_tambahActionPerformed
+
+    private void kurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kurangActionPerformed
+        bil1 = Double.parseDouble(angka);
+        output.setText("-");
+        angka = "";
+        pilih = 2;
+    }//GEN-LAST:event_kurangActionPerformed
+
+    private void bagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bagiActionPerformed
+        bil1 = Double.parseDouble(angka);
+        output.setText("/");
+        angka = "";
+        pilih = 4;
+    }//GEN-LAST:event_bagiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -348,7 +495,7 @@ public class TampilanUtama extends javax.swing.JFrame {
     private javax.swing.JButton kurang;
     private javax.swing.JTextField output;
     private javax.swing.JButton persen;
-    private javax.swing.JButton samDengan;
+    private javax.swing.JButton samaDengan;
     private javax.swing.JButton tambah;
     // End of variables declaration//GEN-END:variables
 }

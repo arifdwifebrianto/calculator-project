@@ -77,7 +77,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Component id="samDengan" max="32767" attributes="0"/>
+                          <Component id="samaDengan" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -140,7 +140,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="angka0" max="32767" attributes="0"/>
                   <Component id="koma" max="32767" attributes="0"/>
-                  <Component id="samDengan" pref="58" max="32767" attributes="0"/>
+                  <Component id="samaDengan" pref="58" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -158,6 +158,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bagiActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="kali">
       <Properties>
@@ -183,6 +186,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kurangActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="koma">
       <Properties>
@@ -205,6 +211,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tambahActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="persen">
       <Properties>
@@ -252,6 +261,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka0ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angka6">
       <Properties>
@@ -260,6 +272,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angka3">
       <Properties>
@@ -268,6 +283,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angka7">
       <Properties>
@@ -276,6 +294,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angka4">
       <Properties>
@@ -284,6 +305,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angkaa1">
       <Properties>
@@ -296,7 +320,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angkaa1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="samDengan">
+    <Component class="javax.swing.JButton" name="samaDengan">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="cc" red="0" type="rgb"/>
@@ -307,7 +331,7 @@
         <Property name="text" type="java.lang.String" value="="/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="samDenganActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="samaDenganActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="output">
@@ -333,6 +357,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angka2">
       <Properties>
@@ -341,6 +368,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="angka8">
       <Properties>
