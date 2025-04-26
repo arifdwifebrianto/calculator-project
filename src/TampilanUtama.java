@@ -25,21 +25,274 @@ public class TampilanUtama extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bagi = new javax.swing.JButton();
+        kali = new javax.swing.JButton();
+        kurang = new javax.swing.JButton();
+        koma = new javax.swing.JButton();
+        tambah = new javax.swing.JButton();
+        persen = new javax.swing.JButton();
+        angka9 = new javax.swing.JButton();
+        bersih = new javax.swing.JButton();
+        angka0 = new javax.swing.JButton();
+        angka6 = new javax.swing.JButton();
+        angka3 = new javax.swing.JButton();
+        angka7 = new javax.swing.JButton();
+        angka4 = new javax.swing.JButton();
+        angkaa1 = new javax.swing.JButton();
+        samDengan = new javax.swing.JButton();
+        output = new javax.swing.JTextField();
+        hapus1saja = new javax.swing.JButton();
+        angka5 = new javax.swing.JButton();
+        angka2 = new javax.swing.JButton();
+        angka8 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        bagi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bagi.setForeground(new java.awt.Color(51, 204, 0));
+        bagi.setText("/");
+
+        kali.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        kali.setForeground(new java.awt.Color(51, 204, 0));
+        kali.setText("x");
+        kali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kaliActionPerformed(evt);
+            }
+        });
+
+        kurang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        kurang.setForeground(new java.awt.Color(51, 204, 0));
+        kurang.setText("-");
+
+        koma.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        koma.setText(".");
+        koma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                komaActionPerformed(evt);
+            }
+        });
+
+        tambah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tambah.setForeground(new java.awt.Color(51, 204, 0));
+        tambah.setText("+");
+
+        persen.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        persen.setForeground(new java.awt.Color(51, 204, 0));
+        persen.setText("%");
+        persen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                persenActionPerformed(evt);
+            }
+        });
+
+        angka9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka9.setText("9");
+        angka9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka9ActionPerformed(evt);
+            }
+        });
+
+        bersih.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bersih.setForeground(new java.awt.Color(255, 0, 51));
+        bersih.setText("AC");
+        bersih.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bersihActionPerformed(evt);
+            }
+        });
+
+        angka0.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka0.setText("0");
+
+        angka6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka6.setText("6");
+
+        angka3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka3.setText("3");
+
+        angka7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka7.setText("7");
+
+        angka4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka4.setText("4");
+
+        angkaa1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angkaa1.setText("1");
+        angkaa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angkaa1ActionPerformed(evt);
+            }
+        });
+
+        samDengan.setBackground(new java.awt.Color(0, 204, 0));
+        samDengan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        samDengan.setText("=");
+        samDengan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                samDenganActionPerformed(evt);
+            }
+        });
+
+        output.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                outputActionPerformed(evt);
+            }
+        });
+
+        hapus1saja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        hapus1saja.setForeground(new java.awt.Color(51, 204, 0));
+        hapus1saja.setText("del");
+
+        angka5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka5.setText("5");
+
+        angka2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka2.setText("2");
+
+        angka8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka8.setText("8");
+        angka8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(output, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(angka7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(koma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bersih, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                                    .addComponent(angkaa1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(angka4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(angka8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(hapus1saja, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(angka5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(angka2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(angka0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(angka9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(persen, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                    .addComponent(angka6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(angka3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(kali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bagi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(kurang, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(samDengan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(bagi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bersih, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                            .addComponent(hapus1saja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(persen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(angka7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(angka9, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(angka8, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(kali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(angka4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(angka5, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(angka6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(kurang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(angkaa1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(234, 234, 234)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(angka3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(angka2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(angka0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(koma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(samDengan, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void outputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_outputActionPerformed
+
+    private void kaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kaliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kaliActionPerformed
+
+    private void persenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_persenActionPerformed
+
+    private void samDenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_samDenganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_samDenganActionPerformed
+
+    private void angka8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_angka8ActionPerformed
+
+    private void angkaa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkaa1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_angkaa1ActionPerformed
+
+    private void angka9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_angka9ActionPerformed
+
+    private void komaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_komaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_komaActionPerformed
+
+    private void bersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bersihActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,5 +330,25 @@ public class TampilanUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton angka0;
+    private javax.swing.JButton angka2;
+    private javax.swing.JButton angka3;
+    private javax.swing.JButton angka4;
+    private javax.swing.JButton angka5;
+    private javax.swing.JButton angka6;
+    private javax.swing.JButton angka7;
+    private javax.swing.JButton angka8;
+    private javax.swing.JButton angka9;
+    private javax.swing.JButton angkaa1;
+    private javax.swing.JButton bagi;
+    private javax.swing.JButton bersih;
+    private javax.swing.JButton hapus1saja;
+    private javax.swing.JButton kali;
+    private javax.swing.JButton koma;
+    private javax.swing.JButton kurang;
+    private javax.swing.JTextField output;
+    private javax.swing.JButton persen;
+    private javax.swing.JButton samDengan;
+    private javax.swing.JButton tambah;
     // End of variables declaration//GEN-END:variables
 }
