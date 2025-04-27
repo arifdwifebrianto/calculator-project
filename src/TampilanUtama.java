@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+//import javax.script.ScriptEngineManager;
+//import javax.script.ScriptEngine;
 /**
  *
  * @author THINKPAD
  */
 public class TampilanUtama extends javax.swing.JFrame {
-    String angka;
-    double jumlah, bil1, bil2;
-    int pilih;
+    String input;
+    boolean bolehOperator = false;
     /**
      * Creates new form TampilanUtama
      */
     public TampilanUtama() {
         initComponents();
-        angka = "";
+        input = "";
     }
 
     /**
@@ -34,20 +34,19 @@ public class TampilanUtama extends javax.swing.JFrame {
         koma = new javax.swing.JButton();
         tambah = new javax.swing.JButton();
         persen = new javax.swing.JButton();
-        angka9 = new javax.swing.JButton();
         bersih = new javax.swing.JButton();
         angka0 = new javax.swing.JButton();
-        angka6 = new javax.swing.JButton();
+        angka1 = new javax.swing.JButton();
+        angka2 = new javax.swing.JButton();
         angka3 = new javax.swing.JButton();
-        angka7 = new javax.swing.JButton();
         angka4 = new javax.swing.JButton();
-        angkaa1 = new javax.swing.JButton();
+        angka5 = new javax.swing.JButton();
+        angka6 = new javax.swing.JButton();
+        angka7 = new javax.swing.JButton();
+        angka8 = new javax.swing.JButton();
+        angka9 = new javax.swing.JButton();
         samaDengan = new javax.swing.JButton();
         output = new javax.swing.JTextField();
-        hapus1saja = new javax.swing.JButton();
-        angka5 = new javax.swing.JButton();
-        angka2 = new javax.swing.JButton();
-        angka8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,7 +78,7 @@ public class TampilanUtama extends javax.swing.JFrame {
         });
 
         koma.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        koma.setText(".");
+        koma.setText(",");
         koma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 komaActionPerformed(evt);
@@ -104,14 +103,6 @@ public class TampilanUtama extends javax.swing.JFrame {
             }
         });
 
-        angka9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angka9.setText("9");
-        angka9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angka9ActionPerformed(evt);
-            }
-        });
-
         bersih.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         bersih.setForeground(new java.awt.Color(255, 0, 51));
         bersih.setText("AC");
@@ -129,70 +120,11 @@ public class TampilanUtama extends javax.swing.JFrame {
             }
         });
 
-        angka6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angka6.setText("6");
-        angka6.addActionListener(new java.awt.event.ActionListener() {
+        angka1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka1.setText("1");
+        angka1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angka6ActionPerformed(evt);
-            }
-        });
-
-        angka3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angka3.setText("3");
-        angka3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angka3ActionPerformed(evt);
-            }
-        });
-
-        angka7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angka7.setText("7");
-        angka7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angka7ActionPerformed(evt);
-            }
-        });
-
-        angka4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angka4.setText("4");
-        angka4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angka4ActionPerformed(evt);
-            }
-        });
-
-        angkaa1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angkaa1.setText("1");
-        angkaa1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angkaa1ActionPerformed(evt);
-            }
-        });
-
-        samaDengan.setBackground(new java.awt.Color(0, 204, 0));
-        samaDengan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        samaDengan.setText("=");
-        samaDengan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                samaDenganActionPerformed(evt);
-            }
-        });
-
-        output.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                outputActionPerformed(evt);
-            }
-        });
-
-        hapus1saja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        hapus1saja.setForeground(new java.awt.Color(51, 204, 0));
-        hapus1saja.setText("del");
-
-        angka5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        angka5.setText("5");
-        angka5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                angka5ActionPerformed(evt);
+                angka1ActionPerformed(evt);
             }
         });
 
@@ -204,11 +136,76 @@ public class TampilanUtama extends javax.swing.JFrame {
             }
         });
 
+        angka3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka3.setText("3");
+        angka3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka3ActionPerformed(evt);
+            }
+        });
+
+        angka4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka4.setText("4");
+        angka4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka4ActionPerformed(evt);
+            }
+        });
+
+        angka5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka5.setText("5");
+        angka5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka5ActionPerformed(evt);
+            }
+        });
+
+        angka6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka6.setText("6");
+        angka6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka6ActionPerformed(evt);
+            }
+        });
+
+        angka7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka7.setText("7");
+        angka7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka7ActionPerformed(evt);
+            }
+        });
+
         angka8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         angka8.setText("8");
         angka8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 angka8ActionPerformed(evt);
+            }
+        });
+
+        angka9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        angka9.setText("9");
+        angka9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                angka9ActionPerformed(evt);
+            }
+        });
+
+        samaDengan.setBackground(new java.awt.Color(0, 204, 0));
+        samaDengan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        samaDengan.setText("=");
+        samaDengan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                samaDenganActionPerformed(evt);
+            }
+        });
+
+        output.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        output.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        output.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                outputActionPerformed(evt);
             }
         });
 
@@ -222,25 +219,26 @@ public class TampilanUtama extends javax.swing.JFrame {
                     .addComponent(output, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(angka7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(koma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bersih, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                                    .addComponent(angkaa1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(angka4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(angka8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(hapus1saja, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(angka5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(angka2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(angka0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(angka7, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(koma, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                                            .addComponent(angka1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(angka4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(angka8, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                            .addComponent(angka5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(angka2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(angka0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(bersih, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -266,14 +264,13 @@ public class TampilanUtama extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bagi, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(persen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bersih, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bagi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bersih, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                            .addComponent(hapus1saja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(persen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
@@ -293,9 +290,9 @@ public class TampilanUtama extends javax.swing.JFrame {
                                 .addComponent(angka6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(kurang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(angkaa1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(234, 234, 234)
+                        .addComponent(angka1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(161, 161, 161)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(angka3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(angka2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -316,131 +313,200 @@ public class TampilanUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_outputActionPerformed
 
     private void kaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kaliActionPerformed
-        bil1 = Double.parseDouble(angka);
-        output.setText("x");
-        angka = "";
-        pilih = 3;
+        if (bolehOperator) {
+            input += " x ";
+            output.setText(input);
+            bolehOperator = false;
+        }
     }//GEN-LAST:event_kaliActionPerformed
 
     private void persenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persenActionPerformed
-        // TODO add your handling code here:
+        int i = input.length() - 1;
+        while (i >= 0 && (Character.isDigit(input.charAt(i)) || input.charAt(i) == '.')) {
+        i--;
+        }
+        
+        String angkaTerakhir = input.substring(i + 1);
+        if (!angkaTerakhir.isEmpty()) {
+            try {
+                double nilai = Double.parseDouble(angkaTerakhir);
+                double hasil = nilai / 100.0;
+                input = input.substring(0, i + 1) + hasil;
+                output.setText(input);
+            } catch (Exception eror) {
+                output.setText("Error");
+            }
+        }
+        bolehOperator = true;
     }//GEN-LAST:event_persenActionPerformed
 
     private void samaDenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_samaDenganActionPerformed
-        switch (pilih) {
-            case 1:
-                bil2 = Double.parseDouble(angka);
-                jumlah = bil1 + bil2;
-                angka = Double.toString(jumlah);
-                output.setText(angka);
-                break;
-            case 2:
-                bil2 = Double.parseDouble(angka);
-                jumlah = bil1 - bil2;
-                angka = Double.toString(jumlah);
-                output.setText(angka);
-                break;
-            case 3:
-                bil2 = Double.parseDouble(angka);
-                jumlah = bil1 * bil2;
-                angka = Double.toString(jumlah);
-                output.setText(angka);
-                break;
-            case 4:
-                bil2 = Double.parseDouble(angka);
-                jumlah = bil1 / bil2;
-                angka = Double.toString(jumlah);
-                output.setText(angka);
-                break;
-            default :
-                break;
+        try {
+            double hasil = hitungInput(input);
+            output.setText(Double.toString(hasil));
+            input = Double.toString(hasil);
+        } catch (Exception eror) {
+            output.setText("Error");
+            input = "";
         }
     }//GEN-LAST:event_samaDenganActionPerformed
 
     private void angka8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka8ActionPerformed
-        angka += "8";
-        output.setText(angka);
+        input += "8";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka8ActionPerformed
 
-    private void angkaa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkaa1ActionPerformed
-        angka += "1";
-        output.setText(angka);
-    }//GEN-LAST:event_angkaa1ActionPerformed
+    private void angka1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka1ActionPerformed
+        input += "1";
+        output.setText(input);
+        bolehOperator = true;
+    }//GEN-LAST:event_angka1ActionPerformed
 
     private void angka9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka9ActionPerformed
-        angka += "9";
-        output.setText(angka);
+        input += "9";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka9ActionPerformed
 
     private void komaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_komaActionPerformed
-        angka += ",";
-        output.setText(angka);
+        input += ".";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_komaActionPerformed
 
     private void bersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihActionPerformed
-        output.setText(angka);
-        bil1 = 0.0;
-        bil2 = 0.0;
-        jumlah = 0.0;
-        angka = "";
+        input = "";
+        output.setText("");
+        bolehOperator = false;
     }//GEN-LAST:event_bersihActionPerformed
 
     private void angka0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka0ActionPerformed
-        angka += "0";
-        output.setText(angka);
+        input += "0";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka0ActionPerformed
 
     private void angka2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka2ActionPerformed
-        angka += "2";
-        output.setText(angka);
+        input += "2";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka2ActionPerformed
 
     private void angka3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka3ActionPerformed
-        angka += "3";
-        output.setText(angka);
+        input += "3";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka3ActionPerformed
 
     private void angka4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka4ActionPerformed
-        angka += "4";
-        output.setText(angka);
+        input += "4";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka4ActionPerformed
 
     private void angka5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka5ActionPerformed
-        angka += "5";
-        output.setText(angka);
+        input += "5";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka5ActionPerformed
 
     private void angka6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka6ActionPerformed
-        angka += "6";
-        output.setText(angka);
+        input += "6";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka6ActionPerformed
 
     private void angka7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka7ActionPerformed
-        angka += "7";
-        output.setText(angka);
+        input += "7";
+        output.setText(input);
+        bolehOperator = true;
     }//GEN-LAST:event_angka7ActionPerformed
 
     private void tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahActionPerformed
-        bil1 = Double.parseDouble(angka);
-        output.setText("+");
-        angka = "";
-        pilih = 1;
+        if (bolehOperator) {
+            input += " + ";
+            output.setText(input);
+            bolehOperator = false;
+        }
     }//GEN-LAST:event_tambahActionPerformed
 
     private void kurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kurangActionPerformed
-        bil1 = Double.parseDouble(angka);
-        output.setText("-");
-        angka = "";
-        pilih = 2;
+        if (bolehOperator) {
+            input += " - ";
+            output.setText(input);
+            bolehOperator = false;
+        }
     }//GEN-LAST:event_kurangActionPerformed
 
     private void bagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bagiActionPerformed
-        bil1 = Double.parseDouble(angka);
-        output.setText("/");
-        angka = "";
-        pilih = 4;
+        if (bolehOperator) {
+            input += " / ";
+            output.setText(input);
+            bolehOperator = false;
+        }
     }//GEN-LAST:event_bagiActionPerformed
 
+    public static double hitungInput(String input) {
+        String[] angka = new String[100];
+        char[] operator = new char[100];
+        int jumlahAngka = 0;
+        int jumlahOperator = 0;
+        
+        String temp = "";
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if ((c >= '0' && c <= '9') || c == '.') {
+                temp += c; }
+//            } else if (c == '-' && (i == 0 || input.charAt(i - 1) == '+' || input.charAt(i - 1) == '-' || input.charAt(i - 1) == 'x' || input.charAt(i - 1) == '/')) {
+//                temp += c;
+//            }
+            else if (c == '+' || c == '-' || c == 'x' || c == '/') {
+                angka[jumlahAngka] = temp;
+                jumlahAngka++;
+                temp = "";
+                operator[jumlahOperator]= c;
+                jumlahOperator++;
+            }
+        }
+        angka[jumlahAngka] = temp;
+        jumlahAngka++;
+        
+        for (int i = 0; i < jumlahOperator; i++) {
+            if (operator[i] == 'x' || operator[i] == '/') {
+                double a = Double.parseDouble(angka[i]);
+                double b = Double.parseDouble(angka[i + 1]);
+                double hasil = 0;
+                if (operator[i] == 'x') {
+                    hasil = a * b;
+                } else {
+                    hasil = a / b;
+                }
+                angka[i] = Double.toString(hasil);
+                for (int j = i + 1; j < jumlahAngka - 1; j++) {
+                    angka[j] = angka[j + 1];
+                }
+                for (int j = i; j < jumlahOperator - 1; j++) {
+                    operator[j] = operator[j + 1];
+                }
+                jumlahAngka--;
+                jumlahOperator--;
+                i--;
+            }
+        }
+        
+        double hasilAkhir = Double.parseDouble(angka[0]);
+        for (int i = 0; i < jumlahOperator; i++) {
+            double b = Double.parseDouble(angka[i + 1]);
+            if (operator[i] == '+') {
+                hasilAkhir = hasilAkhir + b;
+            } else if (operator[i] == '-') {
+                hasilAkhir = hasilAkhir - b;
+            }
+        }
+        return hasilAkhir;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -475,9 +541,9 @@ public class TampilanUtama extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton angka0;
+    private javax.swing.JButton angka1;
     private javax.swing.JButton angka2;
     private javax.swing.JButton angka3;
     private javax.swing.JButton angka4;
@@ -486,10 +552,8 @@ public class TampilanUtama extends javax.swing.JFrame {
     private javax.swing.JButton angka7;
     private javax.swing.JButton angka8;
     private javax.swing.JButton angka9;
-    private javax.swing.JButton angkaa1;
     private javax.swing.JButton bagi;
     private javax.swing.JButton bersih;
-    private javax.swing.JButton hapus1saja;
     private javax.swing.JButton kali;
     private javax.swing.JButton koma;
     private javax.swing.JButton kurang;
